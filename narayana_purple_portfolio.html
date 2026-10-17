@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100817">
+<meta name="description" content="Narayana Avva — Technology Graduate | Python, SQL and Cybersecurity Fundamentals.">
+<title>Narayana Avva | Cybersecurity Portfolio</title>
+<style>
+:root{
+  --bg:#0b0610;--panel:rgba(31,15,43,.72);--panel2:rgba(49,23,67,.62);
+  --purple:#b84dff;--purple2:#8b35e8;--lav:#e9c7ff;--white:#fbf7ff;
+  --muted:#c4b3ce;--line:rgba(204,133,255,.32);--glow:0 0 24px rgba(177,70,255,.32);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 15%,#281039 0%,#12091a 48%,#08050b 100%)}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+a{color:inherit;text-decoration:none}
+.nav-wrap{position:sticky;top:12px;z-index:20;width:min(1120px,calc(100% - 32px));margin:12px auto 0}
+nav{min-height:62px;border:1px solid var(--line);border-radius:24px;background:rgba(25,13,35,.82);backdrop-filter:blur(18px);box-shadow:var(--glow),inset 0 0 18px rgba(166,76,255,.08);display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:16px}
+.brand{font-weight:900;letter-spacing:.12em;font-size:1.02rem;white-space:nowrap}.brand span{color:var(--purple);margin-right:8px}
+.nav-links{display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a,.pill{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#e3d1ef;padding:10px 13px;border:1px solid transparent;border-radius:100px;transition:.25s}
+.nav-links a:hover,.pill:hover{border-color:var(--line);background:rgba(165,67,235,.16);box-shadow:var(--glow);color:#fff}
+.nav-links .contact-link{border-color:var(--line);background:rgba(148,48,212,.18)}
+.hero{min-height:690px;display:grid;place-items:center;text-align:center;padding:90px 20px 95px;position:relative}
+.hero-content{max-width:850px;position:relative}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 17px;border:1px solid var(--line);border-radius:100px;background:var(--panel);font-size:.75rem;letter-spacing:.18em;color:#d7a5ff;text-transform:uppercase;box-shadow:var(--glow)}
+.pulse{width:7px;height:7px;border-radius:50%;background:#c66bff;box-shadow:0 0 12px #c66bff;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
+h1{font-size:clamp(2.7rem,7.5vw,6.3rem);line-height:.98;letter-spacing:-.055em;margin:28px 0 24px;font-weight:950;text-transform:uppercase;text-shadow:0 0 28px rgba(181,73,255,.24)}
+.gradient{color:var(--purple);text-shadow:0 0 32px rgba(174,65,255,.55)}
+.hero-sub{max-width:660px;margin:0 auto;border:1px solid var(--line);border-radius:25px;padding:20px 25px;background:rgba(30,14,41,.7);color:#d8c6e2;line-height:1.8;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;box-shadow:var(--glow)}
+.hero-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:100px;padding:14px 22px;background:rgba(60,28,81,.58);font-size:.8rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;transition:transform .25s,box-shadow .25s}
+.btn.primary{background:linear-gradient(135deg,#a53be9,#6e20bd);box-shadow:0 0 24px rgba(160,52,238,.32);border-color:#c27bff}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 28px rgba(177,70,255,.4)}
+.floating-card{position:absolute;right:max(2vw,20px);top:42%;width:205px;padding:17px;border:1px solid var(--line);border-radius:25px;background:rgba(31,14,43,.75);box-shadow:var(--glow);text-align:left;transform:rotate(2deg)}
+.card-label{font-size:.63rem;color:#d4a2fa;letter-spacing:.15em;text-transform:uppercase}
+.mini-icon{display:inline-grid;place-items:center;width:37px;height:37px;border-radius:12px;background:rgba(159,57,222,.25);border:1px solid var(--line);color:#e6baff;font-weight:900;margin-right:8px}
+.mini-row{display:flex;align-items:center;margin:14px 0;font-size:.78rem;font-weight:800}
+.ticker{border-block:1px solid var(--line);background:rgba(25,12,35,.65);overflow:hidden;padding:13px 0;box-shadow:0 0 24px rgba(168,71,235,.08)}
+.ticker-track{display:flex;gap:13px;width:max-content;animation:marquee 35s linear infinite}
+.ticker span{white-space:nowrap;border:1px solid var(--line);border-radius:100px;padding:10px 17px;color:#dec4ee;background:rgba(65,32,84,.32);font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+@keyframes marquee{to{transform:translateX(-50%)}}
+section{width:min(1080px,calc(100% - 36px));margin:0 auto;padding:85px 0;scroll-margin-top:90px}
+.section-head{text-align:center;margin-bottom:35px}
+.kicker{font-size:.72rem;color:#cf8cff;letter-spacing:.22em;text-transform:uppercase;font-weight:900}
+h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em;margin:12px 0}
+.section-head p{color:var(--muted);line-height:1.7;max-width:650px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.panel{border:1px solid var(--line);border-radius:24px;padding:25px;background:linear-gradient(145deg,rgba(40,19,55,.78),rgba(17,9,25,.82));box-shadow:inset 0 0 25px rgba(168,68,235,.035);transition:.25s}
+.panel:hover{transform:translateY(-4px);box-shadow:var(--glow);border-color:rgba(212,156,255,.65)}
+.panel h3{margin:0 0 12px;font-size:1.12rem}
+.panel p,.panel li{color:var(--muted);line-height:1.75;font-size:.93rem}
+.panel ul{padding-left:19px;margin-bottom:0}
+.skill-list{display:flex;flex-wrap:wrap;gap:9px}
+.skill{font-size:.8rem;color:#ead8f7;border:1px solid rgba(195,126,244,.3);background:rgba(132,50,178,.13);padding:9px 12px;border-radius:12px}
+.label{font-size:.68rem;letter-spacing:.12em;color:#d19aff;text-transform:uppercase;font-weight:900}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.project-top .tag{font-size:.68rem;padding:6px 9px;border-radius:100px;background:rgba(154,59,213,.18);border:1px solid var(--line);color:#e1baff;white-space:nowrap}
+.timeline{display:grid;gap:14px}
+.timeline-item{display:grid;grid-template-columns:125px 1fr;gap:20px;padding:21px;border:1px solid var(--line);border-radius:20px;background:rgba(31,15,43,.56)}
+.year{color:#d6a2ff;font-weight:900;font-size:.85rem}
+.timeline-item h3{margin:0 0 7px}.timeline-item p{margin:0;color:var(--muted);line-height:1.65;font-size:.9rem}
+.cert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cert{border:1px solid var(--line);border-radius:20px;padding:20px;background:var(--panel)}
+.cert strong{display:block;margin:10px 0 6px}.cert p{font-size:.85rem;line-height:1.6;color:var(--muted);margin:0}
+.quote{font-size:1.15rem;line-height:1.8;color:#e1cceF;text-align:center;padding:32px;border:1px solid var(--line);border-radius:25px;background:var(--panel)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-item{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-bottom:1px solid rgba(200,130,240,.15)}
+.contact-item:last-child{border-bottom:0}
+.contact-item small{display:block;color:var(--muted);margin-bottom:4px}
+.contact-item a{overflow-wrap:anywhere}
+footer{text-align:center;border-top:1px solid var(--line);padding:28px 18px;color:#a994b8;font-size:.8rem}
+footer span{color:#d49cff}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){.floating-card{display:none}.hero{min-height:620px}.nav-links a{padding:9px 8px;font-size:.65rem}}
+@media(max-width:620px){.nav-wrap{width:calc(100% - 18px);top:7px;margin-top:7px}nav{padding:12px;align-items:flex-start;flex-direction:column;border-radius:18px;gap:8px}.nav-links{justify-content:flex-start;width:100%;gap:2px}.nav-links a{font-size:.58rem;padding:8px 9px}.hero{padding-top:85px;min-height:600px}h1{font-size:clamp(2.45rem,13vw,4.3rem)}.hero-sub{font-size:.85rem;padding:17px}.grid,.contact-grid,.cert-grid{grid-template-columns:1fr}section{padding:65px 0}.timeline-item{grid-template-columns:1fr;gap:7px}.panel{padding:21px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="nav-wrap"><nav aria-label="Main navigation">
+  <a class="brand" href="#home"><span>›</span> NARAYANA</a>
+  <div class="nav-links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a>
+    <a href="#projects">Projects</a><a href="#education">Education</a><a class="contact-link" href="#contact">Contact</a>
+  </div>
+</nav></div>
+<main>
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow"><i class="pulse"></i> Technology Graduate · Cybersecurity</div>
+    <h1>Welcome to<br><span class="gradient">Narayana Avva's</span><br>Portfolio</h1>
+    <div class="hero-sub">Python • SQL • Cybersecurity Fundamentals<br><span style="color:#c58af7">Learning to detect threats. Building to make systems safer.</span></div>
+    <div class="hero-actions"><a class="btn primary" href="#projects">⌕ Explore Projects</a><a class="btn" href="#contact">✉ Contact Me</a></div>
+  </div>
+  <aside class="floating-card" aria-label="Portfolio focus card">
+    <div class="card-label">◈ Security console</div>
+    <div class="mini-row"><span class="mini-icon">S</span><span>SOC L1<br><small style="color:#ad91bd;font-weight:500">Log monitoring</small></span></div>
+    <div class="mini-row"><span class="mini-icon">⌘</span><span>Python + SQL<br><small style="color:#ad91bd;font-weight:500">Foundational skills</small></span></div>
+    <div class="card-label">STATUS: READY TO LEARN</div>
+  </aside>
+</header>
+<div class="ticker" aria-label="Technical skills"><div class="ticker-track" id="tickerTrack">
+  <span>Python</span><span>SQL</span><span>Cybersecurity</span><span>Log Analysis</span><span>MITRE ATT&amp;CK</span><span>NIST CSF</span><span>Kali Linux</span><span>Burp Suite</span><span>Wireshark</span><span>Nmap</span><span>Incident Triage</span><span>Python</span><span>SQL</span><span>Cybersecurity</span><span>Log Analysis</span><span>MITRE ATT&amp;CK</span><span>NIST CSF</span><span>Kali Linux</span><span>Burp Suite</span><span>Wireshark</span><span>Nmap</span><span>Incident Triage</span>
+</div></div>
+<section id="about">
+  <div class="section-head reveal"><div class="kicker">01 / About me</div><h2>Curious mind. <span class="gradient">Security mindset.</span></h2><p>A technology graduate building a foundation in cybersecurity, Python scripting, and SQL—with a focus on practical labs, analysis, and continuous learning.</p></div>
+  <div class="grid">
+    <article class="panel reveal"><div class="label">Professional summary</div><h3 style="margin-top:12px">Hello, I'm Narayana.</h3><p>B.Tech graduate in Computer Science &amp; Engineering (IoT &amp; Cybersecurity). My foundational skills come from coursework, certifications, and academic projects. I'm looking for an entry-level opportunity where I can apply my knowledge, learn from a team, and grow.</p></article>
+    <article class="panel reveal"><div class="label">Career interests</div><h3 style="margin-top:12px">Cybersecurity · SOC L1</h3><p>Interested in log monitoring, incident triage, phishing analysis, and understanding security events. I value careful investigation, clear documentation, and responsible security practices.</p><div class="skill-list"><span class="skill">Threat Detection</span><span class="skill">Incident Triage</span><span class="skill">Security Analysis</span></div></article>
+  </div>
+</section>
+<section id="skills">
+  <div class="section-head reveal"><div class="kicker">02 / Toolkit</div><h2>Skills &amp; <span class="gradient">technologies</span></h2><p>Core skills and tools listed in my resume.</p></div>
+  <div class="grid">
+    <article class="panel reveal"><h3>◈ Cybersecurity</h3><div class="skill-list"><span class="skill">Log Analysis</span><span class="skill">Incident Triage</span><span class="skill">MITRE ATT&amp;CK</span><span class="skill">NIST CSF</span><span class="skill">OWASP Top 10 Basics</span><span class="skill">Vulnerability Assessment Basics</span></div></article>
+    <article class="panel reveal"><h3>⌘ Python</h3><div class="skill-list"><span class="skill">Data Types</span><span class="skill">Loops</span><span class="skill">Functions</span><span class="skill">File Handling</span><span class="skill">Basic Scripting</span></div></article>
+    <article class="panel reveal"><h3>▤ SQL</h3><div class="skill-list"><span class="skill">SELECT Queries</span><span class="skill">Joins</span><span class="skill">Filtering</span><span class="skill">Grouping</span><span class="skill">Basic Schema Design</span></div></article>
+    <article class="panel reveal"><h3>⚙ Security tools</h3><div class="skill-list"><span class="skill">Kali Linux</span><span class="skill">Burp Suite</span><span class="skill">Wireshark</span><span class="skill">Nmap</span><span class="skill">VirusTotal</span></div></article>
+  </div>
+</section>
+<section id="projects">
+  <div class="section-head reveal"><div class="kicker">03 / Hands-on work</div><h2>Featured <span class="gradient">projects</span></h2><p>Practical projects described in my resume. These are presented as project summaries, not live demos.</p></div>
+  <div class="grid">
+    <article class="panel reveal"><div class="project-top"><span class="label">Project 01</span><span class="tag">SOC L1 Project</span></div><h3>SOC Home Lab: Log Monitoring &amp; Alert Triage</h3><p>Built a small Windows and Linux virtual-machine lab, forwarding logs to a free SIEM such as Splunk Free or Wazuh to practise SOC L1 monitoring.</p><ul><li>Simulated failed-login, brute-force, and port-scan activity using Kali Linux and Nmap.</li><li>Created SIEM searches and alert rules to detect activity.</li><li>Triaged true/false positives and mapped findings to MITRE ATT&amp;CK.</li><li>Documented incident tickets with timelines, evidence, severity, and recommended actions.</li></ul><div class="skill-list" style="margin-top:16px"><span class="skill">SIEM</span><span class="skill">Wazuh / Splunk Free</span><span class="skill">Nmap</span><span class="skill">MITRE ATT&amp;CK</span></div></article>
+    <article class="panel reveal"><div class="project-top"><span class="label">Project 02</span><span class="tag">SOC L1 Project</span></div><h3>Phishing Email Analysis &amp; Incident Response Playbook</h3><p>Analysed sample phishing emails and documented a repeatable triage and response process.</p><ul><li>Inspected email headers, SPF/DKIM/DMARC results, sender details, suspicious links, and attachments.</li><li>Checked URLs, domains, and file hashes with VirusTotal and recorded IOCs.</li><li>Wrote a SOC L1 playbook covering triage, escalation, containment, and user communication.</li><li>Aligned the playbook with NIST CSF.</li></ul><div class="skill-list" style="margin-top:16px"><span class="skill">Phishing Analysis</span><span class="skill">IOCs</span><span class="skill">VirusTotal</span><span class="skill">NIST CSF</span></div></article>
+  </div>
+</section>
+<section id="certificates">
+  <div class="section-head reveal"><div class="kicker">04 / Learning</div><h2>Certifications &amp; <span class="gradient">training</span></h2><p>Certifications listed in my resume.</p></div>
+  <div class="cert-grid">
+    <article class="cert reveal"><div class="label">SWAYAM</div><strong>Introduction to Cybersecurity</strong><p>Cybersecurity fundamentals and foundational concepts.</p></article>
+    <article class="cert reveal"><div class="label">SWAYAM</div><strong>Cybersecurity Tools and Technologies</strong><p>Introduction to tools and technologies used in cybersecurity.</p></article>
+    <article class="cert reveal"><div class="label">TATA Forage</div><strong>Cybersecurity Job Simulation</strong><p>Identity &amp; Access Management job simulation.</p></article>
+    <article class="cert reveal"><div class="label">Coursera</div><strong>Python Certification</strong><p>Python learning and foundational programming skills.</p></article>
+  </div>
+</section>
+<section id="education">
+  <div class="section-head reveal"><div class="kicker">05 / Background</div><h2>Education <span class="gradient">timeline</span></h2><p>Academic background as listed in my resume.</p></div>
+  <div class="timeline">
+    <article class="timeline-item reveal"><div class="year">2022 – 2025</div><div><h3>B.Tech — Computer Science &amp; Engineering (IoT &amp; Cybersecurity)</h3><p>QIS College of Engineering &amp; Technology, Ongole · <strong>82%</strong></p></div></article>
+    <article class="timeline-item reveal"><div class="year">2019 – 2022</div><div><h3>Diploma — Electronics &amp; Communication Engineering (ECE)</h3><p>Rise Krishna Sai Polytechnic, Pelluru · <strong>85%</strong></p></div></article>
+    <article class="timeline-item reveal"><div class="year">2019</div><div><h3>SSC — Secondary School Certificate</h3><p>DRRM Municipal High School · CGPA: <strong>8.5</strong></p></div></article>
+  </div>
+</section>
+<section id="testimonials">
+  <div class="section-head reveal"><div class="kicker">06 / My approach</div><h2>How I <span class="gradient">work</span></h2></div>
+  <div class="quote reveal">“Stay curious, investigate carefully, document clearly, and keep learning.”<br><span style="font-size:.78rem;color:#bd9ccc;letter-spacing:.12em">— MY LEARNING MINDSET</span></div>
+</section>
+<section id="contact">
+  <div class="section-head reveal"><div class="kicker">07 / Get in touch</div><h2>Let's connect <span class="gradient">.</span></h2><p>Open to entry-level opportunities, learning, and professional connections.</p></div>
+  <div class="contact-grid">
+    <article class="panel reveal"><div class="label">Contact details</div>
+      <div class="contact-item"><span class="mini-icon">✉</span><div><small>Email</small><a href="mailto:avvanarayana2003@gmail.com">avvanarayana2003@gmail.com</a></div></div>
+      <div class="contact-item"><span class="mini-icon">☎</span><div><small>Phone</small><a href="tel:+916305717090">+91 6305717090</a></div></div>
+      <div class="contact-item"><span class="mini-icon">⌖</span><div><small>Location</small><span>Ongole, Andhra Pradesh, India</span></div></div>
+      <div class="contact-item"><span class="mini-icon">in</span><div><small>LinkedIn</small><a href="https://linkedin.com/in/avva-narayana-1422b9285" target="_blank" rel="noopener noreferrer">linkedin.com/in/avva-narayana-1422b9285 ↗</a></div></div>
+    </article>
+    <article class="panel reveal"><div class="label">A quick message</div><h3>Have an opportunity?</h3><p>Send an email to discuss entry-level cybersecurity roles, SOC L1 opportunities, or professional connections.</p><a class="btn primary" href="mailto:avvanarayana2003@gmail.com?subject=Portfolio%20Contact%20-%20Narayana%20Avva">✉ Email Narayana</a><p style="font-size:.78rem;margin-top:18px">Tip: add your GitHub URL here once you are ready to share your repositories.</p></article>
+  </div>
+</section>
+</main>
+<footer>Designed with <span>♥</span> in a purple cyber universe · © <span id="year"></span> Narayana Avva</footer>
+<script>
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
+let stars=[];
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(150,Math.floor(innerWidth/8))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.25,a:Math.random()*.65+.15,s:Math.random()*.18+.03}))}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const s of stars){s.y+=s.s;if(s.y>innerHeight){s.y=0;s.x=Math.random()*innerWidth}ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(231,198,255,${s.a})`;ctx.fill()}requestAnimationFrame(draw)}
+addEventListener('resize',resize);resize();draw();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
